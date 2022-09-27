@@ -7,7 +7,7 @@
 1. 在图1的①处填入分配的系统调用号
 2. 在图1的②处填入系统调用的代码
 
-![sys](week2/免编译/img/sys.jpg)
+![sys](/img/sys.jpg)
 
 <center>图1 编辑sys.c</center>
 
