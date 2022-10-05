@@ -19,7 +19,7 @@ unsigned long *sys_call_table;
  
 unsigned int clear_and_return_cr0(void);
 void setback_cr0(unsigned int val);
-static int sys_hackcall(void);
+static int sys_hackcall(struct pt_regs *regs);
  
 unsigned long *sys_call_table = 0;
  
@@ -29,10 +29,13 @@ static int (*orig_syscall_saved)(void);
 /*
  * 自己编写的系统调用函数
  */
-static int sys_hackcall(void)
+static int sys_hackcall(struct pt_regs *regs)
 {
 	/*
 	 * put your code here
+	 * attion: first arg is regs->di, second is regs->si, third is regs->dx
+	 *         fourth is regs->r10, fifth is regs->r9, sixth is regs->r8.
+	 * only suport 6 args.
 	 */
 }
  
